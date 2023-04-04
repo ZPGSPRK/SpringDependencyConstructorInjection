@@ -8,6 +8,7 @@
 /dataSources.local.xml
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
-.idea/discord.xml
 /src/main/resources/img/*
 /src/main/resources/txt/*
+/.name
+/discord.xml
