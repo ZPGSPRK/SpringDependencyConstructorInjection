@@ -4,28 +4,28 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mob" class="org.genspark.Phone">
-        <property name="mob" value="(484) 953-2993"/>
+        <constructor-arg name="mob" value="(484) 953-2993"/>
     </bean>
     <bean id="home" class="org.genspark.Phone">
-        <property name="mob" value="(610) 263-8832"/>
+        <constructor-arg name="mob" value="(610) 263-8832"/>
     </bean>
 
     <bean id="address" class="org.genspark.Address">
-        <property name="city" value="West Chester"/>
-        <property name="state" value="Pennsylvania"/>
-        <property name="country" value="United States"/>
-        <property name="zipcode" value="19382"/>
+        <constructor-arg name="city" value="West Chester"/>
+        <constructor-arg name="state" value="Pennsylvania"/>
+        <constructor-arg name="country" value="United States"/>
+        <constructor-arg name="zipcode" value="19382"/>
     </bean>
 
     <bean id="student" class="org.genspark.Student">
-        <property name="id" value="942111034"/>
-        <property name="name" value="Zachary Perales"/>
-        <property name="ph">
+        <constructor-arg name="id" value="942111034"/>
+        <constructor-arg name="name" value="Zachary Perales"/>
+        <constructor-arg name="ph">
             <list>
                 <ref bean="mob"/>
                 <ref bean="home"/>
             </list>
-        </property>
-        <property name="add" ref="address"/>
+        </constructor-arg>
+        <constructor-arg ref="address"/>
     </bean>
 </beans>
