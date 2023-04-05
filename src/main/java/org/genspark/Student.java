@@ -1,8 +1,11 @@
 package org.genspark;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
+@Component
 public class Student {
     // We need to
     private final int id;
@@ -10,6 +13,7 @@ public class Student {
     private final List<Phone> ph;
     private final Address add;
 
+    @Autowired
     public Student(int id, String name, List<Phone> ph, Address add) {
         this.id = id;
         this.name = name;
