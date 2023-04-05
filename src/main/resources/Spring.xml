@@ -2,17 +2,30 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="Vehicle" class="org.genspark.Bike">
-        <constructor-arg index="0" ref="Tire"/>
+
+    <bean id="mob" class="org.genspark.Phone">
+        <property name="mob" value="(484) 953-2993"/>
     </bean>
-    <bean id="Tire" class="org.genspark.Tire">
-        <constructor-arg index="0" value="BRIDGESTONE"/>
-        <constructor-arg index="1" type="int" value="17"/>
+    <bean id="home" class="org.genspark.Phone">
+        <property name="mob" value="(610) 263-8832"/>
     </bean>
 
-    <!-- <bean id="Tire" class="org.genspark.Tire">
-        <property name="brand" value="Firestone"/>
-        <property name="size" value="17"/>
+    <bean id="address" class="org.genspark.Address">
+        <property name="city" value="West Chester"/>
+        <property name="state" value="Pennsylvania"/>
+        <property name="country" value="United States"/>
+        <property name="zipcode" value="19382"/>
     </bean>
-    -->
+
+    <bean id="student" class="org.genspark.Student">
+        <property name="id" value="942111034"/>
+        <property name="name" value="Zachary Perales"/>
+        <property name="ph">
+            <list>
+                <ref bean="mob"/>
+                <ref bean="home"/>
+            </list>
+        </property>
+        <property name="add" ref="address"/>
+    </bean>
 </beans>
