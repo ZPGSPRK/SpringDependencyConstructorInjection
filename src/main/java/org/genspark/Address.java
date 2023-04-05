@@ -1,10 +1,6 @@
 package org.genspark;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
-@Component
 public class Address {
     private final String city;
     private final String state;
