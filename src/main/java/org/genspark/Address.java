@@ -2,24 +2,15 @@ package org.genspark;
 
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
 public class Address {
-    private String city;
-    private String state;
-    private String country;
-    private String zipcode;
+    private final String city;
+    private final String state;
+    private final String country;
+    private final String zipcode;
 
-    public void setCity(String city) {
+    public Address(String city, String state, String country, String zipcode) {
         this.city = city;
-    }
-
-    public void setState(String state) {
         this.state = state;
-    }
-
-    public void setCountry(String country) {
         this.country = country;
-    }
-
-    public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 

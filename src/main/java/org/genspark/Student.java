@@ -4,28 +4,16 @@ import java.util.List;
 
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
 public class Student {
-    private int id;
-    private String name;
-    private List<Phone> ph;
-    private Address add;
+    // We need to
+    private final int id;
+    private final String name;
+    private final List<Phone> ph;
+    private final Address add;
 
-    public void setId(int id) {
+    public Student(int id, String name, List<Phone> ph, Address add) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public void setPh(List<Phone> ph) {
         this.ph = ph;
-    }
-
-    public void setAdd(Address add) {
         this.add = add;
     }
 
