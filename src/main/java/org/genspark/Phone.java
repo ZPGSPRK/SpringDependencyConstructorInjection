@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
 public class Phone {
     private final String mob;
 
+    public String getMob() {
+        return mob;
+    }
+
     public Phone(String mob) {
         this.mob = mob;
     }
